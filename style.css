@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: white;
+  color: #b00020;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+.sidebar {
+  background: #fff0f0;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 100px;
+  border-right: 2px solid #b00020;
+}
+.sidebar button {
+  margin: 0.5em 0;
+  padding: 1em;
+  background: #fff;
+  border: 2px solid #b00020;
+  border-radius: 5px;
+  color: #b00020;
+  font-weight: bold;
+  cursor: pointer;
+}
+.content {
+  padding: 1em;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.tab {
+  display: none;
+}
+.tab.active {
+  display: block;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #b00020;
+  padding: 0.5em;
+  text-align: center;
+}
+.hidratacion-container {
+  text-align: center;
+}
+.vaso {
+  width: 100px;
+  height: 150px;
+  background: #b00020;
+  margin: auto;
+  border-radius: 10px;
+  position: relative;
+}
+.plus {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 2em;
+  color: white;
+  background: #b00020;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 40px;
+  cursor: pointer;
+}
+.barra-container {
+  background: #ffe5e5;
+  border: 1px solid #b00020;
+  height: 20px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.barra {
+  height: 100%;
+  background: #b00020;
+  width: 0%;
+  border-radius: 10px;
+}
+.calendario {
+  display: flex;
+  flex-direction: column;
+}
+.hora {
+  padding: 1em;
+  margin: 0.5em 0;
+  border: 1px solid #b00020;
+  border-radius: 5px;
+  background: #fff;
+}

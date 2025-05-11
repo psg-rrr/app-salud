@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>App de Salud</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <button onclick="showTab('upp')">🩺 UPP</button>
+      <button onclick="showTab('nutricion')">🍽 Nutrición</button>
+      <button onclick="showTab('hidratacion')">💧 Hidratación</button>
+      <button onclick="showTab('eliminacion')">🚽 Eliminación</button>
+      <button onclick="showTab('ejercicio')">🏃 Ejercicio</button>
+      <button onclick="showTab('farmacos')">💊 Medicación</button>
+    </nav>
+    <main class="content">
+      <section id="upp" class="tab active">
+        <h2>Seguimiento UPP</h2>
+        <button onclick="alert('Imágenes de estadios UPP')">1. Valorar estado</button>
+        <button onclick="alert('Formulario de consulta con profesional')">2. Consulta con profesional</button>
+      </section>
+      <section id="nutricion" class="tab">
+        <h2>Nutrición</h2>
+        <table>
+          <thead>
+            <tr><th>Día</th><th>Desayuno</th><th>Comida</th><th>Cena</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Lunes</td><td contenteditable>---</td><td contenteditable>---</td><td contenteditable>---</td></tr>
+            <tr><td>Martes</td><td contenteditable>---</td><td contenteditable>---</td><td contenteditable>---</td></tr>
+            <tr><td>Miércoles</td><td contenteditable>---</td><td contenteditable>---</td><td contenteditable>---</td></tr>
+            <tr><td>Jueves</td><td contenteditable>---</td><td contenteditable>---</td><td contenteditable>---</td></tr>
+            <tr><td>Viernes</td><td contenteditable>---</td><td contenteditable>---</td><td contenteditable>---</td></tr>
+            <tr><td>Sábado</td><td contenteditable>---</td><td contenteditable>---</td><td contenteditable>---</td></tr>
+            <tr><td>Domingo</td><td contenteditable>---</td><td contenteditable>---</td><td contenteditable>---</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="hidratacion" class="tab">
+        <h2>Hidratación</h2>
+        <div class="hidratacion-container">
+          <div class="vaso" onclick="sumarVaso('agua')">
+            <span class="plus">+</span>
+          </div>
+          <p>Vasos de agua hoy: <span id="agua-count">0</span></p>
+          <p id="agua-alerta"></p>
+        </div>
+      </section>
+      <section id="eliminacion" class="tab">
+        <h2>Eliminación</h2>
+        <p>Eventos registrados hoy: <span id="elim-count">0</span></p>
+        <button onclick="sumarVaso('elim')">+</button>
+        <p id="elim-alerta"></p>
+      </section>
+      <section id="ejercicio" class="tab">
+        <h2>Ejercicio Físico</h2>
+        <p>Pasos: <span id="pasos">4500</span></p>
+        <p>Kcal estimadas: <span id="kcal">180</span></p>
+        <p>Kilómetros: <span id="km">3.2</span></p>
+        <div class="barra-container">
+          <div id="barra-progreso" class="barra"></div>
+        </div>
+      </section>
+      <section id="farmacos" class="tab">
+        <h2>Tratamiento Farmacológico</h2>
+        <div class="calendario">
+          <div contenteditable class="hora">07:00 - Omeoprazol antes de desayunar</div>
+          <div contenteditable class="hora">13:00 - </div>
+          <div contenteditable class="hora">21:00 - </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
